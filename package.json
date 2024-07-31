@@ -1,0 +1,32 @@
+{
+  "name": "weather-cli",
+  "version": "1.0.0",
+  "description": "CLI for getting the weather",
+  "main": "app.js",
+  "bin": "app.js",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "cli",
+    "nodejs",
+    "weather"
+  ],
+  "author": "Maksym Baboshko",
+  "homepage": "https://github.com/maksym-baboshko",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/maksym-baboshko/weather-cli"
+  },
+  "bugs": {
+    "url": "https://github.com/maksym-baboshko/weather-cli/issues",
+    "email": "max.baboshko@gmail.com"
+  },
+  "man": [
+    "./README.md"
+  ],
+  "license": "ISC"
+}
