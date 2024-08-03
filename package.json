@@ -1,5 +1,5 @@
 {
-  "name": "weather-cli",
+  "name": "@exy/weather",
   "version": "1.0.0",
   "description": "CLI for getting the weather",
   "main": "app.js",
