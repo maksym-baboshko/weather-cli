@@ -1,13 +1,9 @@
 #!/usr/bin/env node
-import {
-  ONBOARDING_MSG,
-  PARAM_ERR_MSG,
-  TOKEN_DICTIONARY,
-} from "./constants/index.js";
 import { getArgs } from "./utils/args.util.js";
 import { getWeather } from "./services/api.service.js";
 import { getItem, saveItem } from "./services/storage.service.js";
-import { printError, printSuccess, printHelp } from "./services/log.service.js";
+import { ONBOARDING_MSG, PARAM_ERR_MSG, TOKEN_DICTIONARY } from "./constants/index.js";
+import { printError, printSuccess, printHelp, printWeather } from "./services/log.service.js";
 
 const getWeatherForecast = async () => {
   const city = process.env.CITY ?? (await getItem(TOKEN_DICTIONARY.city));
@@ -39,9 +35,9 @@ const getWeatherForecast = async () => {
   hasError = false;
 
   try {
-    const { main, name } = await getWeather(config);
+    const data = await getWeather(config);
 
-    printSuccess(`${Math.round(main.temp)}°C in ${name}`);
+    printWeather(data);
   } catch (err) {
     printError(err.message);
   }
