@@ -1,6 +1,6 @@
 {
   "name": "@exym/weather",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI for getting the weather",
   "main": "app.js",
   "bin": {
@@ -28,9 +28,6 @@
     "url": "https://github.com/maksym-baboshko/weather-cli/issues",
     "email": "max.baboshko@gmail.com"
   },
-  "man": [
-    "./README.md"
-  ],
   "license": "ISC",
   "dependencies": {
     "chalk": "^5.3.0"
